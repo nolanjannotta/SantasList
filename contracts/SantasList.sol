@@ -61,7 +61,6 @@ contract SantasList {
         for (uint i=0; i<naughtyList.length; i++) {
             string memory name_ = naughtyList[i]._name;
             if (keccak256(bytes(name_)) == keccak256(bytes(_name))) {
-                // *******try to compare the entire struct instead of names?*******
                  _address = naughtyList[i]._address;
                 niceList.push(Person(_name, _address));
                 uint _index = i;
